@@ -1,0 +1,7 @@
+{
+  "availability": 1.0,
+  "threshold": 0.7,
+  "meets_requirement": true,
+  "formula": "successful_samples / total_samples",
+  "note": "This was measured over the local demo observation window. The same formula applies to the required 7-day availability window."
+}

@@ -1,0 +1,19 @@
+{
+  "group_A": {
+    "definition": "even user_id or popularity arm",
+    "successes": 5,
+    "total": 5,
+    "success_rate": 1.0
+  },
+  "group_B": {
+    "definition": "odd user_id or item_cf arm",
+    "successes": 0,
+    "total": 6,
+    "success_rate": 0.0
+  },
+  "delta": 1.0,
+  "z_score": 3.3166,
+  "p_value": 0.000911,
+  "decision": "Statistically significant difference",
+  "metric_definition": "success = recommendation list returned with at least 5 items or requested k if smaller"
+}

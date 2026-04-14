@@ -1,0 +1,18 @@
+{
+  "request_id": "c52c892e-2a2e-469c-a22a-aac9394369b3",
+  "user_id": 4,
+  "model_served": "popularity",
+  "ab_group": "A",
+  "model_version": "v20260414000022",
+  "data_snapshot_id": "watch_events.csv",
+  "pipeline_git_sha": "bbe12d5",
+  "container_image_digest": "local-image",
+  "recommendations": [
+    50,
+    172,
+    10,
+    90,
+    300
+  ],
+  "event_ts": 1776126233.6023877
+}

@@ -1,0 +1,13 @@
+{
+  "total_samples": 20,
+  "successful_samples": 20,
+  "availability": 1.0,
+  "error_rate": 0.0,
+  "p95_latency_ms": 2072.61,
+  "metrics_endpoint": "http://localhost:8000/metrics",
+  "alert_policy": {
+    "latency": "alert if p95_latency_ms > 1000",
+    "errors": "alert if error_rate > 0.30",
+    "availability": "alert if availability < 0.70"
+  }
+}
