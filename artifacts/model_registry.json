@@ -1,5 +1,5 @@
 {
-  "active_version": "v20260414011741",
+  "active_version": "v20260416023515",
   "versions": {
     "v20260413235853": {
       "created_at": "2026-04-13T23:58:53.826012+00:00",
@@ -29,6 +29,16 @@
       },
       "data_snapshot_id": "watch_events.csv",
       "pipeline_git_sha": "74b2987",
+      "container_image_digest": "local-image"
+    },
+    "v20260416023515": {
+      "created_at": "2026-04-16T02:35:15.121183+00:00",
+      "models": {
+        "popularity": "artifacts/versions/v20260416023515/popularity.json",
+        "item_cf": "artifacts/versions/v20260416023515/item_cf.json"
+      },
+      "data_snapshot_id": "watch_events.csv",
+      "pipeline_git_sha": "026af19",
       "container_image_digest": "local-image"
     }
   }
