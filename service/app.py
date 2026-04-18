@@ -36,6 +36,7 @@ app = FastAPI()
 reqs = Counter("recommend_requests_total", "requests", ["status"])
 errors = Counter("recommend_errors_total", "errors")
 lat = Histogram("recommend_latency_seconds", "latency")
+
 PRODUCER = None
 START_TIME = time.time()
 
@@ -149,26 +150,38 @@ def append_trace(trace: dict):
 
 def _create_producer():
     global PRODUCER
+
     if PRODUCER is not None:
         return PRODUCER
+
     if Producer is None:
         return None
 
-    PRODUCER = Producer({"bootstrap.servers": KAFKA_BOOTSTRAP_SERVERS})
-    return PRODUCER
+    try:
+        PRODUCER = Producer({"bootstrap.servers": KAFKA_BOOTSTRAP_SERVERS})
+        print("Kafka producer created")
+        return PRODUCER
+    except Exception as e:
+        print("Kafka not available:", e)
+        return None
 
 
 def _publish_event(topic, event):
     producer = _create_producer()
+
     if producer is None:
         return False
 
     try:
+        producer.poll(0)
         producer.produce(topic, json.dumps(event).encode("utf-8"))
         producer.flush()
         return True
+    except BufferError:
+        print(f"Kafka buffer full, dropped event for topic={topic}")
+        return False
     except Exception as e:
-        print("Kafka publish failed", topic, e)
+        print("Kafka publish failed:", topic, e)
         return False
 
 
