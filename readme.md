@@ -1,34 +1,43 @@
 # 🎬 Movie Recommender System — Final Project
 
-## 👤 Michal Dzienski & Rayan Rabbi
+##  Michal Dzienski & Rayan Rabbi
 
 ---
 
-## 🔗 Live System
+##  Live API
 
-### 🌐 API
+###  Base URL
 
 https://milestone-4-api.onrender.com
 
-### ❤️ Health Check
+###  Health Check
 
 https://milestone-4-api.onrender.com/healthz
 
-### 🎯 Example
+###  Example
 
 https://milestone-4-api.onrender.com/recommend/1?k=5&model=auto
 
+### A/B Testing Examples
+https://milestone-4-api.onrender.com/recommend/2?k=5&model=auto  
+https://milestone-4-api.onrender.com/recommend/3?k=5&model=auto  
+
+### Model Switching
+
+https://milestone-4-api.onrender.com/switch?version=v20260413235853  
+https://milestone-4-api.onrender.com/switch?version=v20260414000022  
+
 ---
 
-## 📄 Deliverables
+##  Deliverables
 
-* 📄 Report: [report.pdf](./report.pdf)
-* 📊 Slides: [slides.pdf](./slides.pdf)
-* 🎥 Video: https://www.youtube.com/watch?v=QrzhACsgEj4 
+*  Report: [report.pdf](./report.pdf)
+*  Slides: [slides.pdf](./slides.pdf)
+*  Video: https://www.youtube.com/watch?v=QrzhACsgEj4 
 
 ---
 
-## ⚙️ Key Features
+##  Key Features
 
 * A/B Testing (popularity vs item-based model)
 * Model versioning + registry
@@ -39,7 +48,7 @@ https://milestone-4-api.onrender.com/recommend/1?k=5&model=auto
 
 ---
 
-## 📈 Example Output
+##  Example Output
 
 ```json
 {
@@ -52,7 +61,7 @@ https://milestone-4-api.onrender.com/recommend/1?k=5&model=auto
 
 ---
 
-# 🚀 Quick Start (Local Setup)
+#  Quick Start (Local Setup)
 
 ## 1. Setup
 
@@ -105,7 +114,7 @@ curl "http://localhost:8000/recommend/1001?k=10&model=popularity"
 
 ---
 
-# ☁️ Deployment (Cloud Run - optional)
+#  Deployment (Cloud Run - optional)
 
 ## Build & Push
 
@@ -127,7 +136,7 @@ gcloud run deploy recommender-api \
 
 ---
 
-# 🧪 Additional Scripts
+#  Additional Scripts
 
 ## Model Comparison
 
@@ -143,7 +152,7 @@ python scripts/probe.py --num-users 50 --calls-per-user 2 --json
 
 ---
 
-# 🧠 Notes
+#  Notes
 
 * Kafka runs locally (simulation)
 * API deployed on Render
@@ -151,7 +160,7 @@ python scripts/probe.py --num-users 50 --calls-per-user 2 --json
 
 ---
 
-# ✅ Summary
+#  Summary
 
 This project demonstrates:
 
